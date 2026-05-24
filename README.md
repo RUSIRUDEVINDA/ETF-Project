@@ -33,7 +33,7 @@ It handles vehicle registration, fuel quota management, QR code generation, and 
 
 ---
 
-## 👨‍🏫 VIVA Explanation Notes: How to Add a New API / Service
+## 👨‍🏫 Explanation Notes: How to Add a New API / Service
 
 If your examiner asks you **"How would you add a new feature to search vehicles by vehicle model?"**, here is exactly how you explain and do it, step by step:
 
