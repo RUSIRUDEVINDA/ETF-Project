@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Fuel QR Registration System — Home</title>
+    <meta name="description" content="Fuel QR Registration System — manage vehicle fuel quotas with QR codes." />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══════════════════════════════════════════════════ -->
+<div id="navbar-container"></div>
+
+    <!-- ══ MAIN ════════════════════════════════════════════════════ -->
+    <main class="page-wrapper">
+        <div class="container">
+
+            <!-- HERO SECTION -->
+            <section class="hero-section">
+                <div class="hero-badge">
+                    <span></span> System Online &amp; Connected
+                </div>
+                <h1 class="hero-title">
+                    Sri Lanka's Smart<br />
+                    <span class="gradient-text">Fuel QR System</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A digital fuel distribution management platform. Register vehicles,
+                    generate QR codes, manage weekly quotas, and search records instantly.
+                </p>
+                <div class="hero-actions">
+                    <a href="register.html" class="btn-fuel-primary"
+                        style="text-decoration:none; padding: 0.85rem 2rem; border-radius: 12px; font-size:1rem;">
+                         Register Vehicle
+                    </a>
+                    <a href="vehicles.html" class="btn-fuel-ghost"
+                        style="text-decoration:none; padding: 0.85rem 2rem; border-radius: 12px; font-size:1rem;">
+                        View Fleet
+                    </a>
+                </div>
+            </section>
+
+            <div class="hero-divider"></div>
+
+            <!-- DASHBOARD STATS -->
+            <section class="mb-5">
+                <div class="page-header mb-4" style="text-align:left;">
+                    <div class="page-tag"> Live Dashboard</div>
+                    <h2 style="font-size:1.5rem; margin-top:0.5rem;">Fleet Overview</h2>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="stat-card">
+                            <div class="stat-icon purple"></div>
+                            <div>
+                                <div class="stat-value" id="statTotal">—</div>
+                                <div class="stat-label">Total Vehicles</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="stat-card">
+                            <div class="stat-icon green"></div>
+                            <div>
+                                <div class="stat-value" id="statActive">—</div>
+                                <div class="stat-label">Active</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="stat-card">
+                            <div class="stat-icon amber"></div>
+                            <div>
+                                <div class="stat-value" id="statPetrol">—</div>
+                                <div class="stat-label">Petrol</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">️</div>
+                            <div>
+                                <div class="stat-value" id="statDiesel">—</div>
+                                <div class="stat-label">Diesel</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="stat-card">
+                            <div class="stat-icon red"></div>
+                            <div>
+                                <div class="stat-value" id="statKerosene">—</div>
+                                <div class="stat-label">Kerosene</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="stat-card">
+                            <div class="stat-icon cyan"></div>
+                            <div>
+                                <div class="stat-value" id="statQuota">—</div>
+                                <div class="stat-label">Weekly Quota</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="hero-divider"></div>
+
+            <!-- QUICK LINKS -->
+            <section class="mb-5">
+                <div class="page-header mb-4" style="text-align:left;">
+                    <div class="page-tag"> Quick Actions</div>
+                    <h2 style="font-size:1.5rem; margin-top:0.5rem;">What would you like to do?</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="register.html" class="quick-link-card">
+                            <div class="quick-link-icon" style="background:rgba(108,99,255,0.15);"></div>
+                            <div class="quick-link-title">Register</div>
+                            <div class="quick-link-desc">New vehicle</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="vehicles.html" class="quick-link-card">
+                            <div class="quick-link-icon" style="background:rgba(0,201,167,0.15);"></div>
+                            <div class="quick-link-title">All Vehicles</div>
+                            <div class="quick-link-desc">View fleet list</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="search.html" class="quick-link-card">
+                            <div class="quick-link-icon" style="background:rgba(59,130,246,0.15);"></div>
+                            <div class="quick-link-title">Search</div>
+                            <div class="quick-link-desc">Find vehicle</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="update.html" class="quick-link-card">
+                            <div class="quick-link-icon" style="background:rgba(245,158,11,0.15);">️</div>
+                            <div class="quick-link-title">Update</div>
+                            <div class="quick-link-desc">Edit record</div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="delete.html" class="quick-link-card">
+                            <div class="quick-link-icon" style="background:rgba(239,68,68,0.15);">️</div>
+                            <div class="quick-link-title">Delete</div>
+                            <div class="quick-link-desc">Remove vehicle</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+    <footer class="fuel-footer">
+        <div class="container">
+            <p> <strong>Fuel QR Registration System</strong></p>
+            <p style="margin-top:0.3rem;">Built with Node.js · Express · MongoDB · Bootstrap 5 · jQuery</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery 3.7 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

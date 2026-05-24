@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "a4d3b6c2-1e9f-4b8a-9c7d-3e2f1a0b5c6d",
+		"name": "Fuel QR System APIs",
+		"description": "Complete collection of APIs for the Fuel QR Registration System.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Utilities",
+			"item": [
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard Stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Register Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"RegNo\": \"ABC-1234\",\n  \"FirstName\": \"Kamal\",\n  \"LastName\": \"Perera\",\n  \"Email\": \"kamal@gmail.com\",\n  \"NearestStation\": \"Colombo City Fuel\",\n  \"FuelType\": \"Petrol\",\n  \"OwnerNIC\": \"123456789V\",\n  \"VehicleModel\": \"Toyota Vitz\",\n  \"WeeklyQuota\": 20\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "fuelType",
+									"value": "Petrol",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by Registration Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/regno/ABC-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"regno",
+								"ABC-1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by First Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/firstname/Kamal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"firstname",
+								"Kamal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by Last Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/lastname/Perera",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"lastname",
+								"Perera"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/email/kamal@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"email",
+								"kamal@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by Station",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/station/Colombo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"station",
+								"Colombo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by Fuel Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/fueltype/Petrol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"fueltype",
+								"Petrol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by NIC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/nic/123456789V",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"nic",
+								"123456789V"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by Registration Number",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"FirstName\": \"Kamala\",\n  \"WeeklyQuota\": 30,\n  \"NearestStation\": \"Galle Harbour Fuel\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/regno/ABC-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"regno",
+								"ABC-1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by First Name",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"NearestStation\": \"Negombo Fuel Station\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/firstname/Kamal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"firstname",
+								"Kamal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by Registration Number",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/vehicles/regno/ABC-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"vehicles",
+								"regno",
+								"ABC-1234"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

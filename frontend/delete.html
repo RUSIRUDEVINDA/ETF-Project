@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Vehicle - Fuel QR System</title>
+    <meta name="description" content="Delete a vehicle from the Fuel QR Registration System." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>FQ</text></svg>" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+<main class="page-wrapper">
+    <div class="container">
+        <section class="page-header">
+            <div class="page-tag" style="background:rgba(239,68,68,0.14);border-color:rgba(239,68,68,0.28);color:#fca5a5;">
+                Permanent Action
+            </div>
+            <h1>Delete Vehicle</h1>
+            <p>Find the vehicle by registration number, review the record, and confirm removal only when you are certain.</p>
+        </section>
+
+        <section class="delete-shell">
+            <div id="deleteResultSection" style="display:none;" class="mb-4">
+                <div class="success-panel">
+                    <div class="success-mark">OK</div>
+                    <h5>Deletion Successful</h5>
+                    <p class="mb-3">Vehicle <strong id="deletedRegNoDisplay" style="color:var(--danger);">-</strong> has been permanently removed from the system.</p>
+                    <a href="vehicles.html" class="btn-fuel-ghost" style="text-decoration:none;">Back to Vehicles</a>
+                </div>
+            </div>
+
+            <div class="delete-layout">
+                <div class="danger-zone">
+                    <div class="danger-zone-header">
+                        <div class="danger-icon">!</div>
+                        <div>
+                            <h4>Delete Vehicle Record</h4>
+                            <p>This lookup opens a final confirmation dialog before anything is removed.</p>
+                        </div>
+                    </div>
+
+                    <form id="deleteForm" novalidate>
+                        <div class="mb-4 delete-field-wrap">
+                            <label for="deleteRegNo" class="form-label" style="color:#fca5a5;">Registration Number *</label>
+                            <input
+                                type="text"
+                                id="deleteRegNo"
+                                class="form-control"
+                                placeholder="ABC-1234"
+                                maxlength="10"
+                                autocomplete="off"
+                                inputmode="text"
+                                aria-describedby="deleteRegNoHelp"
+                            />
+                            <div id="deleteRegNoHelp" class="delete-help-text">
+                                Use the exact registration number assigned to the vehicle.
+                            </div>
+                        </div>
+
+                        <button type="submit" id="deleteLookupBtn" class="btn-fuel-danger w-100 py-3" style="font-size:1rem;justify-content:center;">
+                            Review and Delete
+                        </button>
+                    </form>
+                </div>
+
+                <aside class="delete-side-panel" aria-label="Deletion checklist">
+                    <h5>Before You Continue</h5>
+                    <ul class="delete-check-list">
+                        <li><span>1</span><div>Verify the registration number against the physical vehicle or official record.</div></li>
+                        <li><span>2</span><div>Confirm the owner and vehicle model in the dialog before deleting.</div></li>
+                        <li><span>3</span><div>Deleted records are removed from the vehicle list and cannot be restored from this page.</div></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="delete-info-box">
+                <div class="delete-info-icon">i</div>
+                <div>
+                    <strong>Alternative method:</strong><br />
+                    You can also delete vehicles from the <a href="vehicles.html">Vehicles List</a> using the delete action in a vehicle row.
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel" style="color:#fca5a5 !important;">Final Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="delete-modal-summary">
+                    <div class="delete-modal-icon mx-auto mb-3">!</div>
+                    <p class="mb-2" style="color:var(--text-secondary);">You are about to permanently delete this vehicle:</p>
+                    <p class="delete-modal-reg" id="deleteConfirmRegNo">-</p>
+                    <p style="font-size:0.95rem;color:var(--text-primary);font-weight:700;margin-bottom:0.15rem;" id="deleteConfirmName">-</p>
+                    <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0;" id="deleteConfirmModel">-</p>
+                    <div class="delete-warning-strip">
+                        This action is immediate and cannot be undone.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button id="confirmDeleteBtn" class="btn-fuel-danger px-4 py-2">Permanently Delete</button>
+                <button type="button" class="btn-fuel-ghost px-4 py-2" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="fuel-footer">
+    <div class="container">
+        <p><strong>Fuel QR Registration System</strong> - University Assignment Project</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
